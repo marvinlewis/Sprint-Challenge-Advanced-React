@@ -2,17 +2,17 @@ import React from "react";
 import "./player.css";
 import { useBlueBackGround } from "./useBlueBackGround";
 
-const PlayersCard = ({ player }) => {
+const PlayersCard = (props) => {
     const [ blue,setBlue] = useBlueBackGround(false);
-    //console.log(player);
+    console.log(props.player);
     const handleClick = () => {
         setBlue(true);
     }
 
     return(
         <div>
-            <p>{player.name}</p>
-            <p>{player.country}</p>
+            <p>{props.player.name}</p>
+            <p>{props.player.country}</p>
             <button onClick={handleClick}> blue </button>
         </div>
     )

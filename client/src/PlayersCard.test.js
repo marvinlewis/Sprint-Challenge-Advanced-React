@@ -1,25 +1,19 @@
 import React, { useState } from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import PlayersCard from "./PlayersCard";
 
 
 
 
-test("United States present", () => {
-
-   const player = [{name: "Alex Morgan",
-    country: "United States",
-    }]
-
+test("Alex Morgan is present", () => {
     const { getByText } = render(<PlayersCard player={"alex morgan"}/>);
-    
     getByText(/blue/i);
 });
 
-test("testing to see if values from axios call are on dom", () => {
+test("United States is present ", () => {
     const { getByText } = render(<PlayersCard player={"united states"}/>);
-
      getByText(/blue/i)
+    
 });
 
 

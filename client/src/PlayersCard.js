@@ -4,9 +4,9 @@ import { useBlueBackGround } from "./useBlueBackGround";
 
 const PlayersCard = (props) => {
     const [ blue,setBlue] = useBlueBackGround(false);
-    console.log(props.player);
+    //console.log(props.player);
     const handleClick = () => {
-        setBlue(true);
+        setBlue(!blue);
     }
 
     return(
